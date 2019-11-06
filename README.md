@@ -1,0 +1,2 @@
+# meetup
+event management model
