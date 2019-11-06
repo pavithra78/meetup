@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>registration</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<style>
+	.container{
+		width:400px;
+	}
+	table{
+	position:relative;
+	top:100px;
+
+	}
+	</style>
+</head>
+<body>
+<div class="container">
+	<table class="table table-bordered table-sm">
+  <thead>
+    <tr>
+      <th scope="col">NAME</th>
+      <th scope="col">EVENT</th>
+    </tr>
+  </thead>
+  <tbody>
+  	{%for i in t%}
+    <tr>
+    	
+      <td class="span2">{{i.name}}</td>
+      <td class="span2">{{i.eventname}}</td>
+      
+    </tr>
+    {%endfor%}
+  </tbody>
+</table>
+</div>
+</body>
+</html>

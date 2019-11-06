@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title>allmetups</title>
+  <style>
+  body{
+    background-image:url('https://unsplash.com/photos/Xaanw0s0pMk/download?force=true');
+      background-size: cover;
+  }
+.row{
+  position: relative;
+  top:100px;
+  
+}
+</style>
+  <link rel="stylesheet" href="https://bootswatch.com/4/solar/bootstrap.css">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+</head>
+<body>
+  
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+  <div class="mx-auto order-0">
+        <a class="navbar-brand mx-auto" href="#"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+    <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+                <a class="nav-link" href="#">{{user.username}}</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/createevent/">createevent</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/logout/">Logout</a>
+            </li>
+        </ul>
+        </div>
+    </nav>
+
+<div class="row" style="margin-left:50px;">
+	{%for i in t%}
+	<div class="col-sm-2">
+<div class="card " style="width: 12rem;">
+  
+  
+  <div class="card-body">
+
+    <h5 class="card-title">Event:{{i.eventname}}</h5>
+    <p class="card-text">Venue:{{i.venue}}</p>
+    <p class="card-text">Date:{{i.date}}</p>
+    <p class="card-text">Time:{{i.time}}</p>
+    <p class="card-text">Speaker:{{i.name}}</p>
+    <p class="card-text">Registration Fee:{{i.Amount}}</p>
+    <a href="/joinevent/{{i.id}}" class="btn btn-primary">Join</a>
+     <a href="/registered/{{i.id}}" class="btn btn-primary">people</a>
+    </div>
+  </div>
+  </div>
+  {%endfor%}
+
+
+</div>
+
+</body>
+</html>
